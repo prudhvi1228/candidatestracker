@@ -1,0 +1,14 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds" xmlns:viz.data="sap.viz.ui5.data">
+	<Dialog title="Pie Chart">
+		<content>
+			<Bar>
+				<contentRight>
+					<Button id="cancel" press="onTestClick" text="{Texts>cancelText}"/>
+					<Button id="Edit" press="onEditClick" text="{Texts>editButtonText}"/>
+					<Button id="Done" press="onDoneClick" text="{Texts>doneButtonText}"/>
+				</contentRight>
+			</Bar>
+		</content>
+	</Dialog>
+</core:FragmentDefinition>

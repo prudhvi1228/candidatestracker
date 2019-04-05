@@ -1,0 +1,53 @@
+{
+"candidateData": [{
+"ID":"001",
+"Name": "Sameer",
+"Surname": "Bhamare",
+"Skill": "ABAP Fiori",
+"Interview Date": "02/04/2019",
+"Status": "Accepted"
+}, {
+"ID":"002",
+"Name": "Sriram Prudhvi",
+"Surname": "Dandu",
+"Skill": "UI Developer",
+"Interview Date": "03/04/2019",
+"Status": "Accepted"
+},{
+"ID":"003",
+"Name": "Sagar",
+"Surname": "Varma",
+"Skill": "Developer",
+"Interview Date": "29/03/2019",
+"Status": "On Hold"
+}, {
+"ID":"004",
+"Name": "Ragahu",
+"Surname": "Vassi",
+"Skill": "Developer",
+"Interview Date": "12/04/2019",
+"Status": "Rejected"
+}, {
+"ID":"005",
+"Name": "Chinnu",
+"Surname": "Vani",
+"Skill": "Developer",
+"Interview Date": "24/03/2019",
+"Status": "On Hold"
+},{
+"ID":"006",
+"Name": "Anil",
+"Surname": "Panki",
+"Skill": "Developer",
+"Interview Date": "20/03/2019",
+"Status": "Rejected"
+},{
+"ID":"007",
+"Name": "Sareen",
+"Surname": "Boika",
+"Skill": "Developer",
+"Interview Date": "02/04/2019",
+"Status": "Accepted"
+}]
+
+}

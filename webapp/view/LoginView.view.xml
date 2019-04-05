@@ -1,0 +1,18 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+	controllerName="com.cassinitech.CandidateTracker.CandidateTracker.controller.LoginView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<App>
+		<pages>
+			<Page title="Login Screen">
+				<content>
+					<FlexBox alignItems="Center" justifyContent="Center" height="70%">
+						<VBox>
+							<Input id="idInputEmail" width="270px" placeholder="Email Id" class="sapUiMediumMarginTop " liveChange="onEmailChange"/>
+							<Input id="idInputPwd" width="270px" type="Password" placeholder="Password" liveChange="onPwdChange"/>
+							<Button text="LOGIN" width="270px" type="Emphasized" press="onLoginSubmit" class="sapUiTinyMarginTop"/>
+						</VBox>
+					</FlexBox>
+				</content>
+			</Page>
+		</pages>
+	</App>
+</mvc:View>
