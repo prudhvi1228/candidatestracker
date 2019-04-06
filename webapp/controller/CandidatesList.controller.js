@@ -26,10 +26,13 @@ sap.ui.define([
 		
 		
 		/** 
-		 * Pops up the CandidatePopover Fragment with selected candidates data filed in.
-		 * Initialize and open the POPOVER. 
-		 * Getting the Selected candidates data as Object and Path, Setting the Object to JSON Modle to selectedDataModel(Model Name).
-		 * @param oEvent returns the ITEM List of the Table
+		 * Pops up the CandidatePopover Fragment with selected candidates Data.
+		 * Initialize and open the CandidatePopover Fragment. 
+		 * Get the Binded data and Path.
+		 * Create a JSON model
+		 * Set the binded data of path as  JSON Modle data.
+		 * set the created JSON model with model name selectedDataModel.
+		 * @param oEvent returns the Binding items of the Table
 		 */
 		onPress: function (oEvent) {
 			if (!this._oPopover) {
@@ -54,12 +57,12 @@ sap.ui.define([
 
 		/** 
 		 * Saves the Edited Candidate data to the globalData and Local Storage on clicking the Update Button.
-		 * Getting the Selected Candidates data as the Object.
-		 * Getting all POPOVER edit form fields by ID.
-		 * Getting the global Model's data (globalData) by Property and looping the Models Data and checking whether the
-		 * selected candidtes id is equal to Model data ID then we assign the edited data to relevant Model (globalData).
-		 * Getting the Model and Setting the Property with the Updated Data(modelData).
-		 * Seeting the related changes to the local Storage and Closes the POPOVER.
+		 * Get the Selected Candidates data as the Object.
+		 * Get all edit data.
+		 * Get the globalData by Property and looping the Models Data and checking whether the-
+		 * -selected candidtes id is equal to Model data ID then we assign the edited data to relevant Model (globalData).
+		 * Get the Model and Setting the Property with the Updated Data(modelData).
+		 * Set the related changes to the local Storage and Closes the POPOVER.
 		 */
 		onEditChanges: function () {
 			var oSelectedCandidate = this.getView().getModel("selectedDataModel").getData();
@@ -69,7 +72,7 @@ sap.ui.define([
 			var oSkill = sap.ui.getCore().byId("edtSkill").getValue();
 			var oDate = sap.ui.getCore().byId("edtDate").getValue();
 			var oStatus = sap.ui.getCore().byId("edtStatus").getValue();
-			var modelData = this.getView().getModel("ccc").getProperty("/candidateData");
+			var modelData = this.getView().getModel("globalData").getProperty("/candidateData");
 
 			for (var i = 0; i < modelData.length; i++) {
 				if (modelData[i].ID === oSelectedCandidate.ID) {
@@ -98,9 +101,9 @@ sap.ui.define([
 		/** 
 		 * Serches the data from the Table
 		 * Create an array.
-		 * Check search value if it is not empty,Create Fileter with contains condition and passing the search value.
+		 * Check search value if it is not empty,Create Filter with contains condition and passing the search value.
 		 * Push the filter in the Created Array.
-		 * Getting the binding context of the table and Passing the filter to it.
+		 * Get the binding context of the table and Passing the filter to it.
 		 * @param oEvent returns the parameter value.
 		 */
 		onSearch: function (oEvent) {
@@ -135,7 +138,11 @@ sap.ui.define([
 			this.AddNewCandidateDialogue.close();
 		},
 		/** 
-		 * Saving the data from the AddNewCandidate fragment to the globalData Model and Local Storage when clicked on Add a Candidate Button.
+		 * Saves the created candidate data to the globalData Model and Local Storage
+		 * Create a object with  same properties as globalData properties.
+		 * Assign the added data to created object
+		 * Get the globalData Model data with candidateData property .
+		 * push the created object to the oModelData and set the candidateData property to oModelData and Local storage.
 		 * After saving setting the input value of related fragment as null and close the fragment.
 		 */
 		onSaveCandidate: function () {
@@ -177,6 +184,8 @@ sap.ui.define([
 		
 		/** 
 		 * Setting the Pie Chats VizProperties and Title and setting the pieModel.
+		 * Create a json Model with JSON model path.
+		 * set the model to ownercomponet with pieModel name
 		 */
 		onAfterRendering: function () {
 			var oChart = this.getView().byId("pieid");
